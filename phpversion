@@ -1,0 +1,60 @@
+	
+  <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+       <br>
+        <h2>YOUR SELLING DATA</h2>
+        <br><br><br>
+
+     
+
+            <?php  
+            $conn = mysqli_connect("localhost","root","Yasir@4633","entry");
+
+            if(!$conn)
+            {
+              die("connection failed ".mysqli_connect_error());
+            }
+            else
+            {
+
+                echo "connection establised";
+                $sql = "select * from makeentry";
+                $result = mysqli_query($conn,$sql);
+                if(mysqli_num_rows($result) > 0)
+
+                { ?>
+
+      <table>
+
+            <tr>
+
+                  <th>Product Name</th>
+
+                  <th>Quantity sold</th>
+
+                  <th>Customer Name</th>
+
+                  <th>Total price</th>
+
+            </tr>  
+                    <?php  while($row = mysqli_fetch_assoc($result))
+                      {
+                          $proname = $row["proname"];
+                          $proprice = $row["proprice"];
+                          $proquantity = $row["proquantity"];
+                          $procname = $row["procname"]; ?>
+
+
+                          <tr>
+                                <td><?php $protype ?></td>
+                                <td><? $proquantity ?></td>
+                                 <td><?php $procname ?></td>
+                                 <td><?php $proprice ?></td>
+                          </tr>
+                <?php   }
+              }?>  
+
+  </table>
+
+
+</div>

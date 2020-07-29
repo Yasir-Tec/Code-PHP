@@ -1,0 +1,26 @@
+
+<?php
+
+$url = 'json1.json';	//path to your json file.
+
+$data = file_get_contents($url);
+//put the content of the file into variable.
+
+$character = json_decode($data); //Decode the json feed.
+?>
+<table>
+	<tbody>
+		<tr>
+			<th>Name</th>
+			<th>Age</th>
+		</tr>
+		<?php foreach($character as $h) : ?>
+		<tr>
+			<td><?php echo $h->name ?></td>
+	
+		
+			<td><?php echo $h->age ?></td>
+		</tr>
+	<?php endforeach ?>
+	</tbody>
+</table>

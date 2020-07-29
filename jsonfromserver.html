@@ -1,0 +1,21 @@
+
+
+<h2>Create object from json string</h2>
+<p id="demo"></p>
+<script>
+
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function()
+{
+	if(this.readyState ==4 && this.status ==200)
+	{
+		var myobj = JSON.parse(this.responseText);
+		document.getElementById("demo").innerHTML = myobj.name;
+
+
+	}
+};
+
+xmlhttp.open("GET","myjson.txt",true);
+xmlhttp.send();
+</script>

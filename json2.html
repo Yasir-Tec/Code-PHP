@@ -1,0 +1,16 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h2>Create object from json string</h2>
+<p id="demo"></p>
+
+<script>
+
+var txt = '{"name":"john", "age":30}'		json object/
+var jsobj = JSON.parse(txt);									parse is used to convert json object into javascript object/
+document.getElementById("demo").innerHTML = jsobj.name;			innerHTML is used to set dynamic value to id followed by p tag/
+</script>
+</body>
+</html>

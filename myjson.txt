@@ -1,0 +1,15 @@
+{
+	"name" : "yasir",
+	"age" : 21,
+	"pets" :[
+		{
+			"animal":"dog",
+			"name" : "jacky"
+		},
+		{
+			"animal":"cat",
+			"name":"munggi"
+		}
+
+	]
+}
